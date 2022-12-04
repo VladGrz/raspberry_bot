@@ -22,10 +22,10 @@ async def on_start(x):
 
 
 # Registering handlers for different types of updates
-dp.register_message_handler(start_command, commands=["start"])
-dp.register_message_handler(help_command, commands=["help"])
-dp.register_message_handler(take_picture, commands=["take_picture"])
-dp.register_message_handler(calibrate_camera, commands=["calibrate"], state='*')
+dp.register_message_handler(start_command, commands=["start"], state='*')
+dp.register_message_handler(help_command, commands=["help"], state='*')
+dp.register_message_handler(take_picture, commands=["take_picture"], state='*')
+dp.register_message_handler(calibrate_camera, commands=["calibrate_bowl"], state='*')
 dp.register_message_handler(calibrate_servo, commands=["calibrate_filling"])
 dp.register_message_handler(fill_bowl, commands=["fill_bowl"])
 dp.register_callback_query_handler(calibrate_empty,
