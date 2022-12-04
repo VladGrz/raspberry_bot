@@ -2,7 +2,7 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
 from data import config
-from bot.basic_commands import start_command, take_picture
+from bot.basic_commands import start_command, take_picture, help_command
 from bot.fill_bowl_command import fill_bowl
 from bot.calibrate_command import *
 from bot.states.calibration import *
@@ -23,6 +23,7 @@ async def on_start(x):
 
 # Registering handlers for different types of updates
 dp.register_message_handler(start_command, commands=["start"])
+dp.register_message_handler(help_command, commands=["help"])
 dp.register_message_handler(take_picture, commands=["take_picture"])
 dp.register_message_handler(calibrate_camera, commands=["calibrate"], state='*')
 dp.register_message_handler(calibrate_servo, commands=["calibrate_filling"])
