@@ -1,0 +1,6 @@
+aiogram
+aioschedule
+python-dotenv
+aiohttp
+RPi.GPIO
+picamera
